@@ -11,6 +11,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.wittolcandy.modone.block.ModBlocks;
 import net.wittolcandy.modone.item.moditems;
 import org.slf4j.Logger;
 
@@ -25,6 +26,7 @@ public class modone {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         moditems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
@@ -39,6 +41,7 @@ public class modone {
     private void addCreative(CreativeModeTabEvent.BuildContents event) {
         if(event.getTab() == CreativeModeTabs.FOOD_AND_DRINKS) {
             event.accept(moditems.APPLE_JUICE);
+            event.accept(ModBlocks.Apple_Block);
         }
     }
 

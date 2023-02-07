@@ -1,6 +1,6 @@
 {
-  "parent": "minecraft.item/generated",
+  "parent": "minecraft:item/generated",
   "textures": {
-    "layer0":  "modone:item/apple_juice"
-}
+    "layer0": "tutorialmod:item/apple_juice"
+  }
 }

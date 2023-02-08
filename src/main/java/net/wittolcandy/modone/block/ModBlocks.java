@@ -21,6 +21,12 @@ public class ModBlocks {
     public static final RegistryObject<Block> Apple_Block = registerBlock("apple_block",
             ()-> new Block(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(1f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> Nullvoid_Block = registerBlock("nullvoid_block",
+            ()-> new Block(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
+                    .strength(10f).requiresCorrectToolForDrops()));
+
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);

@@ -27,6 +27,9 @@ public class moditems {
                 .build();
     }
 
+    public static final RegistryObject<Item> NULLVOID_SHARD = ITEMS.register("nullvoid_shard",
+            () -> new Item(new Item.Properties()));
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

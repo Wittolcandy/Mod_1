@@ -1,4 +1,6 @@
 {
   "item.modone.apple_juice": "Apple Juice",
-  "block.modone.apple_block": "Apple Block"
+  "block.modone.apple_block": "Apple Block",
+  "block.modone.nullvoid_block": "Nullvoid",
+  "item.modone.nullvoid_shard": "Nullvoid Shard"
 }
